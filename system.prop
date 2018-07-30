@@ -4,6 +4,10 @@ use.voice.path.for.pcm.voip=false
 # Charger
 ro.charger.enable_suspend=true
 
+# Fling velocities
+ro.min.fling_velocity=140
+ro.max.fling_velocity=20000
+
 # Radio
 DEVICE_PROVISIONED=1
 persist.vendor.cne.feature=1
