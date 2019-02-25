@@ -136,9 +136,6 @@ ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/configs/vintf/odm_manifest_qcril.xm
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
 
-# Vendor Security Patch Level
-VENDOR_SECURITY_PATCH := 2021-08-01
-
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
@@ -156,6 +153,9 @@ TARGET_USE_AOSP_SURFACEFLINGER := true
 # Treble
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# Vendor Security Patch Level
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := false
