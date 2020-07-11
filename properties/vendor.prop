@@ -97,6 +97,7 @@ vendor.video.disable.ubwc=1
 vendor.display.enable_default_color_mode=1
 
 # Display
+debug.cpurend.vsync=false
 debug.renderengine.backend=skiaglthreaded
 debug.sf.enable_hwc_vds=0
 debug.sf.disable_client_composition_cache=1
