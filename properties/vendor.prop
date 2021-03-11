@@ -111,6 +111,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # FS-verity
 ro.apk_verity.mode=2
 
+# GFX
+ro.config.avoid_gfx_accel=true
+
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
 
