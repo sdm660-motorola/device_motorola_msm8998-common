@@ -113,6 +113,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
+TARGET_POWERHAL_BOOST_EXT := $(PLATFORM_PATH)/configs/power/boost-ext.cpp
 
 # Properties
 TARGET_ODM_PROP += $(PLATFORM_PATH)/odm.prop
