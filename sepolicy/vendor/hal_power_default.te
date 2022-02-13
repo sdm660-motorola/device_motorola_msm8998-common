@@ -4,6 +4,8 @@ r_dir_file(hal_power_default, sysfs_input)
 r_dir_file(hal_power_default, sysfs_sensor)
 unix_socket_connect(hal_power_default, perfd, perfd)
 
+typeattribute hal_power_default mlstrustedsubject;
+
 allow hal_power_default cgroup:file r_file_perms;
 
 allow hal_power_default device_latency:chr_file rw_file_perms;
@@ -12,6 +14,13 @@ allow hal_power_default latency_device:chr_file rw_file_perms;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:dir search;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:{ file lnk_file } rw_file_perms;
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
+
+# Set scheduling info for system_server (for adpf)
+allow hal_power_default system_server:process setsched;
 
 allow hal_power_default sysfs:file { read open getattr };
 allow hal_power_default proc:file { write };
