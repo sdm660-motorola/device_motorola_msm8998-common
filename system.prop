@@ -8,6 +8,9 @@ ro.charger.enable_suspend=true
 ro.min.fling_velocity=140
 ro.max.fling_velocity=20000
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Radio
 DEVICE_PROVISIONED=1
 persist.vendor.cne.feature=1
