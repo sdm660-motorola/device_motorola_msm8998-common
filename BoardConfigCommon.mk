@@ -76,6 +76,10 @@ TARGET_FS_CONFIG_GEN += \
 TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_msm8998
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8998
 
+# Jemalloc
+MALLOC_SVELTE := true
+MALLOC_SVELTE_FOR_LIBC32 := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
