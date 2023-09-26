@@ -7,8 +7,8 @@ persist.vendor.audio.ras.enabled=false
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=8
 ro.vendor.audio.sdk.ssr=false
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.dolby.ds2.hardbypass=true
 vendor.audio.feature.a2dp_offload.enable=false
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.anc_headset.enable=true
@@ -69,6 +69,10 @@ vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio_hal.period_size=240
 
+# Audio (Dolby)
+persist.vendor.audio_fx.current=dolby
+ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
+
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.operating_voltage_mv=3300
@@ -128,7 +132,7 @@ ro.oem_unlock_supported=1
 
 # OMX
 # Rank OMX SW codecs lower than OMX HW codecs
-debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank.sw-audio=16
 debug.stagefright.omx_default_rank=0
 
 # Perf
