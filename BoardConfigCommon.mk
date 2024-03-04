@@ -84,11 +84,14 @@ BOARD_KERNEL_CMDLINE += sched_enable_hmp=1
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.veritymode=eio
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/msm-4.4
+
+# LLVM
+KERNEL_CUSTOM_LLVM := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
