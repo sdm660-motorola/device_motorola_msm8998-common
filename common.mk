@@ -30,6 +30,13 @@ PRODUCT_PACKAGES += \
      CarrierConfigOverlay \
      WifiOverlay
 
+# A/B updater
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
@@ -412,6 +419,17 @@ PRODUCT_COPY_FILES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
+
+# Update Engine
+PRODUCT_PACKAGES += \
+    otapreopt_script \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl \
+    update_engine_client
 
 # USB
 PRODUCT_PACKAGES += \
