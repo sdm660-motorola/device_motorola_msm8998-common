@@ -23,6 +23,7 @@
 #
 
 PLATFORM_PATH := device/motorola/msm8998-common
+KERNEL_PATH := device/motorola/msm8998-common-kernel
 
 # Platform
 TARGET_ARCH := arm64
@@ -80,7 +81,8 @@ BOARD_KERNEL_CMDLINE += androidboot.veritymode=eio
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8998
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 
 ifeq ($(TARGET_NEEDS_LEGACY_VERITY_SIGNING),true)
 BUILD_BROKEN_DUP_RULES := true
