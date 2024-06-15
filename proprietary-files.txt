@@ -714,11 +714,11 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.rp.so
 
-# Thermal
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/bin/thermal-engine
-vendor/lib64/libthermalioctl.so
+# Thermal - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
+vendor/bin/thermal-engine|7e4bd3bfdf72b669f17cd9befa7f286ebf871c38
+vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
+vendor/lib/libthermalclient.so|b9c1bfd3aa5ee2d092941141bf9f6e456ee2fb43
+vendor/lib64/libthermalclient.so|f95bc07fbb05944489c2890397c4a603a7cbe021
 
 # Time services
 -vendor/lib/libtime_genoff.so
