@@ -156,9 +156,6 @@ ifdef TARGET_SUPPORTS_MOTO_MODS
     BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/mods/vendor
 endif
 
-# SurfaceFlinger
-TARGET_USE_AOSP_SURFACEFLINGER := true
-
 # Treble
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
