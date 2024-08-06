@@ -344,6 +344,22 @@ vendor/etc/permissions/com.motorola.camera2.xml|6d77e9310c6647cda3c35f64097a14a1
 # MOTO RIL
 vendor/lib64/libsensorndkbridge.so
 
+# MotoWaves - from nio-11 RRTS31.Q1-20-24-2
+-product/app/MotoWavesV2/MotoWavesV2.apk;OVERRIDES=MusicFX|2b1b21cd0f9b8209874c72a063600359e2f54d71
+-system_ext/priv-app/WavesServiceV2/WavesServiceV2.apk|e7bea29ad0ca1a389f56101f961c1e914f7fd083
+-system/framework/com.motorola.frameworks.core.addon.jar|45385312c32011b80f0e8bfa7628151c60d9a3eb
+product/etc/permissions/com.motorola.motowaves.features.xml|a66ed6363d9b217e074dcac7bfff888c6b1a03a5
+system/etc/permissions/com.motorola.frameworks.core.addon.xml|3940e9a53d6adf12cb2e567c5f07cc3eafc3c4cd
+system_ext/etc/permissions/privapp-permissions-com.waves.maxxservice.xml|d52b504e7687f307836f94675556e8c1b5a6829c
+vendor/etc/maxx_conf.ini|3b34d133315b175fcd4e472029b07aa8549ff20f
+vendor/etc/maxx_default.mps|7bd901bc4c99c9c836587e47257385618196be39
+vendor/lib/libAndroidAlgSys.so|f1056c767d4181fba1d6feab43b4099726c034c0
+vendor/lib/libMAM2_3-AlgFX-Coretex_A9.so|e2d074dbed6995e2cafc739422d17b76732e39bb
+vendor/lib/libadspd.so|fd5239bad07fd487fe22a4e832ebf670759224e1
+vendor/lib/libc++_shared.so|1b73f3026a7065ed837d594c9b3cd23e9421cd39
+vendor/lib/soundfx/libmaxxeffect-cembedded.so|822a4ab33851eaf17610dec43daa45cb01b637c5
+vendor/lib64/libadspd.so|779d848e68054855517b324ab53f12ecb9b8cd82
+
 # Offmode charging
 vendor/bin/charge_only_mode|7abae0e894fd36fd10795099b4a5025df2c1e817|0ba9713157beb424eef3e9af721374e18c88bd89
 

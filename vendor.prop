@@ -117,6 +117,13 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # FS-verity
 ro.apk_verity.mode=2
 
+# MotoWaves
+persist.vendor.audio_fx.current=waves
+persist.vendor.audio_fx.waves.maxxsense=true
+persist.vendor.audio_fx.waves.processing=true
+persist.vendor.audio_fx.waves.proc_twks=true
+persist.vendor.audio_fx.waves.systrace=true
+
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
 

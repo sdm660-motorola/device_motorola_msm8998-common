@@ -266,6 +266,10 @@ PRODUCT_PACKAGES += \
     MotoActions \
     MotoCommonOverlay
 
+# MotoWaves
+PRODUCT_PACKAGES += \
+    MotoWavesV2
+
 # netmgrd
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
