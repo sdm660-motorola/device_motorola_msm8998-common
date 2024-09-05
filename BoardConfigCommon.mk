@@ -41,6 +41,19 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
 BOARD_USES_QCOM_HARDWARE := true
 
+# A/B updater
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor
+
+ifneq (,$(filter %lake, $(TARGET_PRODUCT)))
+AB_OTA_PARTITIONS += \
+    dtbo
+endif
+
+AB_OTA_UPDATER := true
+
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
