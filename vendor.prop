@@ -196,9 +196,6 @@ ro.vendor.sensors.smd=false
 ro.crypto.volume.contents_mode=ice
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# SOC
-ro.soc.manufacturer=Qualcomm
-
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
