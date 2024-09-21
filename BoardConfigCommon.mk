@@ -111,12 +111,6 @@ TARGET_USES_INTERACTION_BOOST := true
 TARGET_POWERHAL_BOOST_EXT := $(PLATFORM_PATH)/configs/power/boost-ext.cpp
 TARGET_POWERHAL_MODE_EXT := $(PLATFORM_PATH)/configs/power/mode-ext.cpp
 
-# Properties
-TARGET_PRODUCT_PROP += $(PLATFORM_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(PLATFORM_PATH)/system_ext.prop
-TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
-TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/init/fstab.qcom
 
