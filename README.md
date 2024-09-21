@@ -1,4 +1,4 @@
-Copyright 2018 - The LineageOS Project
+Copyright (C) 2024 Paranoid Android
 
 Device configuration for Motorola MSM8998/SDM660 Devices
 ========================================================

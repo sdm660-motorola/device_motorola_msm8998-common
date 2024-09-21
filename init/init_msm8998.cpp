@@ -1,6 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
-   Copyright (c) 2019, The LineageOS Project
+   Copyright (c) 2024, Paranoid Android
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
