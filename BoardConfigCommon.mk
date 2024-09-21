@@ -21,8 +21,6 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
-BOARD_USES_QCOM_HARDWARE := true
-
 # A/B updater
 AB_OTA_PARTITIONS += \
     boot \
@@ -57,15 +55,6 @@ TARGET_USES_GRALLOC1 := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 LOC_HIDL_VERSION := 3.0
 
-# HALs-in-tree
-USE_DEVICE_SPECIFIC_AUDIO := true
-DEVICE_SPECIFIC_AUDIO_PATH := $(PLATFORM_PATH)/qcom-caf/audio
-USE_DEVICE_SPECIFIC_DISPLAY := true
-DEVICE_SPECIFIC_DISPLAY_PATH := $(PLATFORM_PATH)/qcom-caf/display
-USE_DEVICE_SPECIFIC_MEDIA := true
-DEVICE_SPECIFIC_MEDIA_PATH := $(PLATFORM_PATH)/qcom-caf/media
-TARGET_USES_MEDIA_EXTENSIONS := true
-
 # HIDL
 DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/configs/vintf/manifest.xml
 ifdef BOARD_USES_KEYMASTER_4
@@ -76,10 +65,7 @@ endif
 ifdef TARGET_SUPPORTS_MOTO_MODS
     DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/configs/vintf/motomods_manifest.xml
 endif
-DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/configs/vintf/compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(PLATFORM_PATH)/configs/vintf/framework_manifest.xml
 TARGET_FS_CONFIG_GEN += \
-    $(PLATFORM_PATH)/config.fs \
     $(PLATFORM_PATH)/mot_aids.fs
 
 # Init
@@ -94,7 +80,7 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
-BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
+BOARD_KERNEL_CMDLINE += sched_enable_hmp=1
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.veritymode=eio
@@ -102,7 +88,7 @@ BOARD_KERNEL_CMDLINE += androidboot.veritymode=eio
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8998
+TARGET_KERNEL_SOURCE := kernel/msm-4.4
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -126,7 +112,6 @@ TARGET_POWERHAL_BOOST_EXT := $(PLATFORM_PATH)/configs/power/boost-ext.cpp
 TARGET_POWERHAL_MODE_EXT := $(PLATFORM_PATH)/configs/power/mode-ext.cpp
 
 # Properties
-TARGET_ODM_PROP += $(PLATFORM_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(PLATFORM_PATH)/product.prop
 TARGET_SYSTEM_EXT_PROP += $(PLATFORM_PATH)/system_ext.prop
 TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
@@ -137,7 +122,6 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-CUSTOM_APNS_FILE := $(PLATFORM_PATH)/configs/sprint_apns.xml
 ODM_MANIFEST_SKUS += qcril
 ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/configs/vintf/odm_manifest_qcril.xml
 
