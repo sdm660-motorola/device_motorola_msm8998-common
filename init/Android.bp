@@ -10,3 +10,104 @@ cc_library_static {
     shared_libs: ["libbase"],
     srcs: ["init_msm8998.cpp"],
 }
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "fstab.qcom",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.mmi.ramdump.rc",
+    src: "init.mmi.ramdump.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.mmi.usb.rc",
+    src: "init.mmi.usb.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.moto.rc",
+    src: "init.moto.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.power.rc",
+    src: "init.power.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.qcom.rc",
+    src: "ueventd.qcom.rc",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "init.class_main.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.gbmods.sh",
+    src: "init.gbmods.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.mmi.usb.sh",
+    src: "init.mmi.usb.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "init.qcom.post_boot.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qcom.sensors.sh",
+    src: "init.qcom.sensors.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "init.qcom.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qti.qseecomd.sh",
+    src: "init.qti.qseecomd.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "wlan_carrier_bin.sh",
+    src: "wlan_carrier_bin.sh",
+    soc_specific: true,
+}

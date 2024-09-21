@@ -335,7 +335,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+    $(LOCAL_PATH)/init/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
