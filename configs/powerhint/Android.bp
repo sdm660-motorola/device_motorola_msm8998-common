@@ -1,0 +1,5 @@
+prebuilt_etc {
+    name: "sdm636_powerhint",
+    src: "powerhint.json",
+    soc_specific: true,
+}
