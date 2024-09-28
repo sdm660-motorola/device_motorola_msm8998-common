@@ -57,6 +57,7 @@ LOC_HIDL_VERSION := 3.0
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/configs/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(PLATFORM_PATH)/configs/vintf/framework_compatibility_matrix.xml
 ifdef BOARD_USES_KEYMASTER_4
     DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/configs/vintf/keymaster_4.xml
 else

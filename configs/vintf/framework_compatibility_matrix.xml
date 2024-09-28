@@ -1,0 +1,134 @@
+<compatibility-matrix version="2.0" type="framework">
+<hal format="hidl" optional="true">
+    <name>android.hardware.boot</name>
+    <version>1.0-1</version>
+    <interface>
+        <name>IBootControl</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.cas</name>
+    <version>1.0-2</version>
+    <interface>
+        <name>IMediaCasService</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.drm</name>
+    <version>1.0-2</version>
+    <interface>
+        <name>ICryptoFactory</name>
+        <instance>widevine</instance>
+    </interface>
+    <interface>
+        <name>IDrmFactory</name>
+        <instance>widevine</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.health</name>
+    <version>2.0-1</version>
+    <interface>
+        <name>IHealth</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.nfc</name>
+    <version>1.0-2</version>
+    <interface>
+        <name>INfc</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.wifi</name>
+    <version>1.0-6</version>
+    <interface>
+        <name>IWifi</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>com.fingerprints.extension</name>
+    <version>1.0</version>
+    <interface>
+        <name>IFingerprintAuthenticator</name>
+        <instance>default</instance>
+    </interface>
+    <interface>
+        <name>IFingerprintCalibration</name>
+        <instance>default</instance>
+    </interface>
+    <interface>
+        <name>IFingerprintEngineering</name>
+        <instance>default</instance>
+    </interface>
+    <interface>
+        <name>IFingerprintNavigation</name>
+        <instance>default</instance>
+    </interface>
+    <interface>
+        <name>IFingerprintRecalibration</name>
+        <instance>default</instance>
+    </interface>
+    <interface>
+        <name>IFingerprintSenseTouch</name>
+        <instance>default</instance>
+    </interface>
+    <interface>
+        <name>IFingerprintSensorTest</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>motorola.hardware.audio.eqservice</name>
+    <version>1.0</version>
+    <interface>
+        <name>IEQServiceHIDL</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>motorola.hardware.health</name>
+    <version>1.0</version>
+    <interface>
+        <name>IMotHealth</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>com.motorola.mod</name>
+    <version>1.0</version>
+    <interface>
+        <name>IModManager</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.egistec.hardware.fingerprint</name>
+    <version>2.0</version>
+    <interface>
+        <name>IBiometricsFingerprintEts</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.nxp.nxpnfc</name>
+    <version>1.0</version>
+    <interface>
+        <name>INxpNfc</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.imsrtpservice</name>
+    <version>2.0-1</version>
+    <interface>
+        <name>IRTPService</name>
+        <instance>imsrtpservice</instance>
+    </interface>
+</hal>
+</compatibility-matrix>
