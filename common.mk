@@ -502,7 +502,8 @@ PRODUCT_PACKAGES += \
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS += \
-    perf
+    perf \
+    vibrator
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -667,11 +668,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.usb.rmnet.func.name=rmnet_bam \
     vendor.usb.rmnet.inst.name=rmnet \
     vendor.usb.rndis.func.name=rndis_bam
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
 
 # VNDK
 # Update this list with what each blob is actually for
