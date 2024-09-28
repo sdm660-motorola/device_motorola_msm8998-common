@@ -363,32 +363,6 @@ vendor/lib64/libadspd.so|779d848e68054855517b324ab53f12ecb9b8cd82
 # Offmode charging
 vendor/bin/charge_only_mode|7abae0e894fd36fd10795099b4a5025df2c1e817|0ba9713157beb424eef3e9af721374e18c88bd89
 
-# Perf - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|68fbdbda31cfbf5ad4aef5531e73f1ce98322430
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
-vendor/lib/libperfconfig.so|b7b0362b0004a34961c1ca9939079bf7609e7743
-vendor/lib/libperfgluelayer.so|bbed8d08ea9b8910bde4b6d771b44ca02cdd77ae
-vendor/lib/libqti-perfd-client.so|e4dc5f32957fd156af6b8787dfe71c457770459c
-vendor/lib/libqti-util.so|761bb16c0d54313caacb9e1a33cfe33ce1f03289
-vendor/lib/vendor.qti.memory.pasrmanager@1.0.so|37b3c0a0cb209e8ea169218abe4615e516697f13
-vendor/lib/vendor.qti.memory.pasrmanager@1.1.so|ab8825d3e8a63b05e77766c5b722b9a58a1bfc5d
-vendor/lib64/libperfconfig.so|0972e02978d2a894094314771455edae9f4fcf7d
-vendor/lib64/libperfgluelayer.so|5e6caf0eed5c8bc9de68fa145bc86da307dcdc8b
-vendor/lib64/libqti-perfd-client.so|3584075867f88414affd57e89a87a6a0edaa3b10
-vendor/lib64/libqti-util.so|a13bccc7cc29c84dfe9db0eae1f86417ff4d88bb
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|7e332989976f3549fcdb6c7b990fef3844dd36ae
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|4254d087742dd950f0f524106e6262d1e15dda60
-
-# Perf (io-prefetch) - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
-system_ext/lib/vendor.qti.hardware.iop@2.0.so|97ffad3c82ffdeaf1cfb83c3284be595cafeacb3
-system_ext/lib64/vendor.qti.hardware.iop@2.0.so|ce4765ba1033df89f9422b4ef95a224aa64b5b5a
-vendor/lib/libqti-iopd-client.so|4680aa2358346dbe958dba2e893ce001b871ef89
-vendor/lib/vendor.qti.hardware.iop@1.0.so|8527b888ba9385a9ef303455c833742343a74c18
-vendor/lib/vendor.qti.hardware.iop@2.0.so|b99ca546a94997c5116af05b355c73f260fffc81
-vendor/lib64/libqti-iopd-client.so|50c6699c623f348b8dd0bc11b894f5372cc93a6a
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|c992a515db75d548c68752bc87e502a49089beee
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|1c295b7f483244df5d3259b8361aa83242d3d82f
-
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -716,12 +690,6 @@ vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.rp.so
-
-# Service tracker - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service|46268253a28d60c28e7a8639accdbc49bc572f5f
-vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc|7cf06148da895586c20aab7e6bd01b806d8128b6
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|1745bf39413e1e867131eadff7417620c6daeb1c
--vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml|40b6abd9b4be99dc5722eb60d71ee36764bf4ef3
 
 # Thermal - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
 vendor/bin/thermal-engine|7e4bd3bfdf72b669f17cd9befa7f286ebf871c38
