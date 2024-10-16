@@ -715,11 +715,11 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.rp.so
 
-# Thermal
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/bin/thermal-engine
-vendor/lib64/libthermalioctl.so
+# Thermal - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/thermal-engine|d58d0a84373658e230032d437e35e3bf3db92c8c
+vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
+-vendor/lib/libthermalclient.so|2225ccc5e21c889778591a5d42774ab54a54de88
+-vendor/lib64/libthermalclient.so|40978729e458ec49fabf457375e90ceb081d1ad8
 
 # Time services - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 -vendor/app/TimeService/TimeService.apk|4b18d352dddd78e8591043cf44e73d69d1948d33
