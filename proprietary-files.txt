@@ -715,11 +715,11 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.rp.so
 
-# Thermal
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/bin/thermal-engine
-vendor/lib64/libthermalioctl.so
+# Thermal - from Zebra/helios/helios:13/13-22-18.00-TG-U02-STD-HEL-04/84:user/release-keys
+vendor/bin/thermal-engine|855b5ede2b6d7d8cf24211708f718827f1d8afe5
+vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
+-vendor/lib/libthermalclient.so|fa3dd0ce12f1e1e146f0dec1c14b29d93aafd660
+-vendor/lib64/libthermalclient.so|0aa6521fc90f0d3211acc4c7bc0308058da9cce5
 
 # Time services - from Zebra/helios/helios:13/13-22-18.00-TG-U02-STD-HEL-04/84:user/release-keys
 -vendor/app/TimeService/TimeService.apk|8155de9d66f1f6d5b58a1af12f420d6889cea877
