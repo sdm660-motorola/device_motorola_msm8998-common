@@ -721,12 +721,12 @@ vendor/lib64/sensors.rp.so
 vendor/bin/thermal-engine
 vendor/lib64/libthermalioctl.so
 
-# Time services
--vendor/lib/libtime_genoff.so
--vendor/lib64/libtime_genoff.so
-vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/etc/init/init.time_daemon.rc
+# Time services - from Zebra/helios/helios:13/13-22-18.00-TG-U02-STD-HEL-04/84:user/release-keys
+-vendor/app/TimeService/TimeService.apk|8155de9d66f1f6d5b58a1af12f420d6889cea877
+-vendor/lib/libtime_genoff.so|5482c1954b46755270a20208420d6fb527d223c4
+-vendor/lib64/libtime_genoff.so|1665709ab77112c33fa84a6dd45913e1d3adb4ce
+vendor/bin/time_daemon|a313e2419cd77d99ff4a40a88defe77088a4bc8f
+vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 
 # Wi-Fi
 vendor/bin/cnss-daemon
