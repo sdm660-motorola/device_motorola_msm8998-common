@@ -721,12 +721,12 @@ vendor/lib64/sensors.rp.so
 vendor/bin/thermal-engine
 vendor/lib64/libthermalioctl.so
 
-# Time services
--vendor/lib/libtime_genoff.so
--vendor/lib64/libtime_genoff.so
-vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/etc/init/init.time_daemon.rc
+# Time services - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+-vendor/app/TimeService/TimeService.apk|4b18d352dddd78e8591043cf44e73d69d1948d33
+-vendor/lib/libtime_genoff.so|61f2498b119a9991f86e350c7ed8fe1d2ffbab20
+-vendor/lib64/libtime_genoff.so|118c31a2a35bd82b8d392bc09d6eb37448389437
+vendor/bin/time_daemon|35147f3f1a63f45d4449b28177ac3495d375b4fc
+vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 
 # Wi-Fi
 vendor/bin/cnss-daemon
