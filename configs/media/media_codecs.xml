@@ -183,6 +183,7 @@
             <Limit name="concurrent-instances" max="16" />
             <Limit name="performance-point-3840x2160" value="30" />
         </MediaCodec>
+        <Include href="media_codecs_dolby_audio.xml" />
     </Decoders>
     <Include href="media_codecs_google_video.xml" />
 </MediaCodecs>
