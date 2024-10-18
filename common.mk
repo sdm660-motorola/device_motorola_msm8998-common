@@ -98,19 +98,27 @@ PRODUCT_PACKAGES += \
     gralloc.$(TARGET_MOTO_PLATFORM) \
     hwcomposer.$(TARGET_MOTO_PLATFORM) \
     memtrack.$(TARGET_MOTO_PLATFORM) \
-    libdisplayconfig \
-    libqdMetaData.system \
-    libvulkan \
-    libtinyxml
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
+    libqdMetaData \
+    libqdMetaData.vendor \
+    libtinyxml \
+    libvulkan
 
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0 \
     android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@4.0-impl  \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
+    vendor.display.config@1.11.vendor \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
