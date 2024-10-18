@@ -7,6 +7,10 @@
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Include display HAL makefiles.
+include hardware/qcom-caf/msm8998/display/display-commonsys-intf/config/display-interfaces-product.mk
+include hardware/qcom-caf/msm8998/display/display-commonsys-intf/config/display-product-system.mk
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
