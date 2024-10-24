@@ -21,6 +21,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_product=true \
+    POSTINSTALL_PATH_product=bin/check_dynamic_partitions \
+    FILESYSTEM_TYPE_product=ext4 \
+    POSTINSTALL_OPTIONAL_product=false
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -125,6 +131,17 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.2.vendor \
     libhidlmemory.vendor
+
+# Enable retrofit dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
+PRODUCT_PACKAGES += \
+    check_dynamic_partitions
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
 
 # Fingerprint
 PRODUCT_PACKAGES += \
