@@ -111,9 +111,6 @@ vendor.gralloc.enable_fb_ubwc=1
 # Factory reset partition
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# Fastbootd
-ro.fastbootd.available=true
-
 # FS-verity
 ro.apk_verity.mode=2
 

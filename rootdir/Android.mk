@@ -8,7 +8,11 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.qcom
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
+ifeq ($(PRODUCT_RETROFIT_DYNAMIC_PARTITIONS), true)
+LOCAL_SRC_FILES    := etc/fstab_dynamic.qcom
+else
 LOCAL_SRC_FILES    := etc/fstab.qcom
+endif
 LOCAL_REQUIRED_MODULES := fstab.qcom_ramdisk
 LOCAL_VENDOR_MODULE    := true
 include $(BUILD_PREBUILT)
@@ -18,7 +22,11 @@ LOCAL_MODULE       := fstab.qcom_ramdisk
 LOCAL_MODULE_STEM  := fstab.qcom
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
+ifeq ($(PRODUCT_RETROFIT_DYNAMIC_PARTITIONS), true)
+LOCAL_SRC_FILES    := etc/fstab_dynamic.qcom
+else
 LOCAL_SRC_FILES    := etc/fstab.qcom
+endif
 LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/first_stage_ramdisk
 include $(BUILD_PREBUILT)
 else
