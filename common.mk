@@ -9,10 +9,20 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
+
+PRODUCT_PACKAGES += \
+    FrameworksResCommon_Sys \
+    CarrierConfigResCommon_Sys \
+    SettingsResCommon_Sys \
+    SettingsProviderResCommon_Sys \
+    SystemUIResCommon_Sys \
+    TelephonyResCommon_Sys \
+    WifiResCommon_Sys
 
 ifeq ($(filter %_nash %_payton,$(TARGET_PRODUCT)),)
 $(call inherit-product, device/motorola/msm8998-common/common_dynamic.mk)
@@ -378,7 +388,6 @@ PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 
 # Telephony
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
@@ -451,7 +460,6 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     libwifi-hal-qcom \
     libwpa_client \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
