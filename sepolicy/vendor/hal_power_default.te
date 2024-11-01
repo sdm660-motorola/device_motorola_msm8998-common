@@ -3,3 +3,17 @@ r_dir_file(hal_power_default, sysfs_graphics)
 r_dir_file(hal_power_default, sysfs_input)
 r_dir_file(hal_power_default, sysfs_sensor)
 unix_socket_connect(hal_power_default, perfd, perfd)
+
+# Power HAL
+allow hal_power_default device_latency:chr_file rw_file_perms;
+allow hal_power_default latency_device:chr_file rw_file_perms;
+
+allow hal_power_default proc:{ file lnk_file } rw_file_perms;
+allow hal_power_default proc:file { write };
+
+allow hal_power_default { sysfs_devfreq sysfs_kgsl }:dir search;
+allow hal_power_default { sysfs_devfreq sysfs_kgsl }:{ file lnk_file } rw_file_perms;
+
+allow hal_power_default sysfs:file { read open getattr };
+
+r_dir_file(hal_power_default, sysfs_graphics)
