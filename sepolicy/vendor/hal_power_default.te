@@ -8,6 +8,8 @@ unix_socket_connect(hal_power_default, perfd, perfd)
 allow hal_power_default device_latency:chr_file rw_file_perms;
 allow hal_power_default latency_device:chr_file rw_file_perms;
 
+typeattribute hal_power_default mlstrustedsubject;
+
 allow hal_power_default proc:{ file lnk_file } rw_file_perms;
 allow hal_power_default proc:file { write };
 
@@ -17,3 +19,10 @@ allow hal_power_default { sysfs_devfreq sysfs_kgsl }:{ file lnk_file } rw_file_p
 allow hal_power_default sysfs:file { read open getattr };
 
 r_dir_file(hal_power_default, sysfs_graphics)
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
+
+# Set scheduling info for system_server (for adpf)
+allow hal_power_default system_server:process setsched;
