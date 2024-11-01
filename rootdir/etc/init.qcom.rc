@@ -547,14 +547,6 @@ on post-fs-data
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
-    #Create PERFD deamon related dirs
-    mkdir /data/vendor/perfd 0770 root system
-    chmod 2770 /data/vendor/perfd
-    rm /data/vendor/perfd/default_values
-
-    #Create IOP  deamon related dirs
-    mkdir /data/vendor/iop 0700 root system
-
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
@@ -783,9 +775,6 @@ on property:sys.boot_completed=1
 
     # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
-
-    # This initializes vendor.qti.hardware.perf service
-    setprop vendor.post_boot.parsed 1
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -1190,12 +1179,6 @@ service vendor.adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
-
-service vendor.energy-awareness /vendor/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core

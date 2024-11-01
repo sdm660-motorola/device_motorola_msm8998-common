@@ -298,13 +298,13 @@ PRODUCT_PACKAGES += \
     libvpx.vendor
 
 # Perf
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/perf/,$(TARGET_COPY_OUT_VENDOR)/etc/perf)
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.0.vendor
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -378,7 +378,11 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # Speed profiles services and wifi-service to reduce RAM and storage
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt

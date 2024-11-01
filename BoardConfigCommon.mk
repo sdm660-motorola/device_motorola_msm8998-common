@@ -80,9 +80,6 @@ TARGET_FS_CONFIG_GEN += \
     $(PLATFORM_PATH)/configs/config.fs \
     $(PLATFORM_PATH)/configs/mot_aids.fs
 
-# HWUI
-HWUI_COMPILE_FOR_PERF := true
-
 # Init
 TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_msm8998
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8998
@@ -137,11 +134,6 @@ endif
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 41943040 # 40 MB
 endif
 
-# Power
-TARGET_USES_INTERACTION_BOOST := true
-TARGET_POWERHAL_BOOST_EXT := $(PLATFORM_PATH)/configs/power/boost-ext.cpp
-TARGET_POWERHAL_MODE_EXT := $(PLATFORM_PATH)/configs/power/mode-ext.cpp
-
 # Properties
 TARGET_ODM_PROP += $(PLATFORM_PATH)/properties/odm.prop
 TARGET_PRODUCT_PROP += $(PLATFORM_PATH)/properties/product.prop
@@ -165,6 +157,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
 
 # SELinux
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
