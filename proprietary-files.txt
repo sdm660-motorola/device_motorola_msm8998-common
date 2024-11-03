@@ -671,11 +671,12 @@ vendor/bin/subsystem_ramdump|7f852bea217895e0f8191e92da8d114ba72e15ef
 vendor/lib/libsubsystem_control.so|da82bb63993a186c067de0ccd6ec0e165bb36a5e
 vendor/lib64/libsubsystem_control.so|3ae879485eedb7d1bc84a47ddef474608ddb4d3e
 
-# Thermal - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-vendor/bin/thermal-engine|d58d0a84373658e230032d437e35e3bf3db92c8c
+# Thermal - from LA.UM.8.2.r1-06200-sdm660.0
+vendor/bin/thermal-engine|fc23647cf4ccf8f056477ecbb29169c35627b95a
 vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
--vendor/lib/libthermalclient.so|2225ccc5e21c889778591a5d42774ab54a54de88
--vendor/lib64/libthermalclient.so|40978729e458ec49fabf457375e90ceb081d1ad8
+-vendor/lib/libthermalclient.so|34b6ee056ae8a6df578fc243f8acd3567a49d97b
+-vendor/lib64/libthermalclient.so|20f1fd238fc81bf1c6828ec416121c0ef66e0df1
+vendor/lib64/libthermalioctl.so|e1844c66a556946b45bcb6c2e747460aa5201770
 
 # Time services - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 -vendor/app/TimeService/TimeService.apk|4b18d352dddd78e8591043cf44e73d69d1948d33
