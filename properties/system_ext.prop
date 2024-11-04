@@ -13,6 +13,9 @@ vidc.enc.dcvs.extra-buff-count=2
 # Display
 ro.sf.hwc_set_default_colormode=true
 
+# GFX
+ro.config.avoid_gfx_accel=true
+
 # Play store
 ro.com.google.clientidbase.am=android-motorola
 ro.com.google.clientidbase.gmm=android-motorola
