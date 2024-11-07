@@ -1,0 +1,2 @@
+# Ignore the socket if it fails to create
+dontaudit qti_init_shell self:capability dac_read_search;
