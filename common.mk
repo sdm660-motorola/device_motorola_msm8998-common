@@ -297,6 +297,11 @@ PRODUCT_PACKAGES += \
     libvorbisidec.vendor \
     libvpx.vendor
 
+# Partitions
+ifeq ($(filter %_nash %_payton,$(TARGET_PRODUCT)),)
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+endif
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0.vendor
