@@ -6,6 +6,8 @@ ro.charger.enable_suspend=true
 
 # Dex
 dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.systemservercompilerfilter=speed
+dalvik.vm.systemuicompilerfilter=speed
 dalvik.vm.dexopt.secondary=true
 
 # Fling velocities
