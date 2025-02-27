@@ -104,9 +104,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Dalvik
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
-
 # Display
 PRODUCT_PACKAGES += \
     gralloc.$(TARGET_MOTO_PLATFORM) \
