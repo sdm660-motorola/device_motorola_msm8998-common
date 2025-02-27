@@ -385,6 +385,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # Speed profiles services and wifi-service to reduce RAM and storage
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
