@@ -140,11 +140,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml
-
 # Init
 ifneq ($(TARGET_USES_OEM_AS_VENDOR),true)
 PRODUCT_COPY_FILES += \
@@ -310,15 +305,7 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Telephony
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+    CarrierConfigOverlay
 
 # Thermal
 PRODUCT_PACKAGES += \
