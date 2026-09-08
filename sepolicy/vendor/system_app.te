@@ -13,4 +13,7 @@ allow system_app sysfs_fingerprint:dir search;
 
 binder_call(system_app, hal_power_default)
 allow system_app hal_power_default:binder call;
-allow system_app proc_vmallocinfo:file { getattr open read };
+
+# FM Radio
+allow system_app fm_radio_device:chr_file rw_file_perms;
+get_prop(system_app, vendor_bluetooth_prop)

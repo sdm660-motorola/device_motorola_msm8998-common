@@ -47,8 +47,7 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libaudio-resampler \
     libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libvolumelistener
+    libqcomvoiceprocessing
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
@@ -123,6 +122,11 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
+
+# FM
+PRODUCT_PACKAGES += \
+    RevampedFMRadio \
+    libqcomfmjni
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

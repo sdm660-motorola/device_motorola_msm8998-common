@@ -123,6 +123,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # FS-verity
 ro.apk_verity.mode=2
 
+# FM
+ro.vendor.fm.use_audio_session=true
+
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
 
